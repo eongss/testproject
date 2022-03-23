@@ -1,0 +1,80 @@
+WebMvcConfig에 LoggerInterceptor, LoginUserInterceptor 등록되어 있음
+
+홈페이지 접속시 com.dtcs.config.LoggerInterceptor.preHandle 실행
+
+요청 리퀘스트 URI 로그로 찍은후에
+부모 preHandle 호출
+
+preHandle은 클라이언트에서 컨트롤러로 요청할 때 가로채는 것이다. 쉽게 말해 컨트롤러가 호출되기 전에 실행되는 메서드이다.
+postHandle은 컨트롤러에서 클라이언트로 요청할 때 가로채는 것이다. 쉽게 말해 컨트롤러가 정상적으로 호출되고 난 후에 실행되는 메서드이다.
+
+Interceptor는 Controller의 Handler가 실행되기 전이나 후에 추가적인 작업이 수행되어야 할때 사용한다.
+이때 Interceptor를 활용하여 얻을 수 있는 장점은 크게 아래 세 가지와 같다.
+
+공통 코드 사용으로 코드 재사용성 증가
+
+메모리 낭비, 서버 부하 감소
+
+코드 누락에 대한 위험성 감소
+
+preHandle가 false 반환시 컨트롤러 또는 다음 핸들러 인터셉터를 실행하지 않음
+
+
+로그인 시
+------ com.dtcs.common.controller.LoginController.login 실행 -------
+
+RSA 암호화 생성 후 세션에 _rsaPrivateKey_ 저장
+모델에 rsaPublicKeyModulus, rsaPublicKeyExponent 추가
+------ 끝 -----
+
+인증(Authentication) : 해당 사용자가 본인이 맞는지 확인하는 절차.
+인가(Authorization) : 인증된 사용자가 요청된 자원에 접근 가능한지를 결정하는 절차.
+
+
+com.dtcs.config.UserAuthenticationProvider.supports
+
+스프링 security 라이브러리 사용
+com.dtcs.config.UserAuthenticationProvider
+
+com.dtcs.config.UserAuthenticationProvider.authenticate 메서드 실행
+
+요청 어트리뷰트에서 아까 세션에 저장한 _rsaPrivateKey_ 가져옴
+스프링 시큐리티 authentication 객체에서 getName(), getCredentials() 등을 이용해서 
+로그인 유저 ID와 패스워드 가져옴
+
+----- com.dtcs.common.dao.UserMapper.selectUserList 실행 -----
+userMapper.selectUserList()로 처리한 결과 값을 List<UserVo> userList에 담음
+
+아이디랑 비번 일치하면
+LoginUser(userVo) 객체 생성해서 LoginUser loginUser에 담음
+getRole(userId)로 해당 아이디 롤 얻어옴
+
+얻어온 롤들을 List<String> auths 에 추가함
+
+LoginUser loginUser = new LoginUser(userVo);
+List<String> roles = getRoles(userId);
+----- com.dtcs.common.dao.UserMapper.readAuthority 실행 ------
+----- com.dtcs.common.dao.UserMapper.readAuthority 끝 ------
+
+
+
+com.dtcs.common.dao.UserMapper.selectAuthMenuList -> 결과값으로 MenuVo 리턴
+
+com.dtcs.common.controller.LoginController에서 
+user 모델 생성후 뷰로 모델을 리턴해줌
+
+left.jsp에서 user모델(LoginUser 인스턴스)의 authMenus(List<MenuVo>)를 가져온 후 꺼내서 leftMenu에 할당
+MenuVo 인스턴스에서 menuUrl 필드를 가져옴
+
+
+
+
+
+
+
+
+pageContext.request.contextPath -> 상대경로
+
+
+
+ @Controller의 역할은 Model 객체를 만들어 데이터를 담고 View를 찾는 것
