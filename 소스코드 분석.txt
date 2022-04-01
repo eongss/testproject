@@ -1,0 +1,44 @@
+로그인 하면
+
+com.dtcs.common.controller.LoginController에서 user 모델 생성후 뷰로 모델을 리턴해줌
+
+당일현황 버튼 누르면
+
+com.dtcs.config.LoginUserInterceptor.preHandle -  LoginUser Interceptor - 로그인 권한
+
+
+
+
+컨트롤러
+com.dtcs.status.controller.StatusController.todayStatus - 당일현황 컨트롤러
+
+/status/todayStatus JSP파일로 리턴(JSP VIEW로 이동)
+
+
+서비스
+com.dtcs.status.service.StatusService <- 인터페이스
+
+서비스 임플먼트 <- 인터페이스 구현
+com.dtcs.status.service.StatusServiceImpl.selectTodayPlanStatList
+
+Mybatis
+매퍼
+com.dtcs.status.dao.StatusMapper<- 인터페이스
+com.dtcs.status.dao.StatusMapper.xml <- 매퍼 구현
+
+com.dtcs.status.dao.StatusMapper.selectTodayPlanStatList 
+resultType="com.dtcs.status.vo.StatChartVo"
+
+dtcsdb 데이터베이스 접속
+SVC_PRCS_STAT 테이블 조회해서
+SVC_REQ_M, SITE_M, PRTN_M, USER_M, SVC_EXEC_PLAN 테이블 조인
+
+결과 값을 
+컨트롤러 com.dtcs.status.controller.StatusController.getTodayStatusChart 메서드로 반환
+
+
+
+
+
+
+
