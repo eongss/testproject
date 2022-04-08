@@ -36,9 +36,6 @@ RSA 암호화 생성 후 세션에 _rsaPrivateKey_ 저장
 
 com.dtcs.config.UserAuthenticationProvider.supports
 
-스프링 security 라이브러리 사용
-com.dtcs.config.UserAuthenticationProvider
-
 com.dtcs.config.UserAuthenticationProvider.authenticate 메서드 실행
 
 요청 어트리뷰트에서 아까 세션에 저장한 _rsaPrivateKey_ 가져옴
