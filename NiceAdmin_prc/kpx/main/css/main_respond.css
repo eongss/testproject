@@ -1,0 +1,277 @@
+@charset "utf-8";
+
+/* 반응형 - media qurey 시작 */
+
+/* 넓이가 1918px 이하일 때*/
+@media all and (max-width:1918px){
+
+	/* section02 */
+	.section02 .fp-tableCell {padding-right:140px;padding-left:140px;}
+	.section02 .inner {width:100%;}
+	.power_for .slick-arrow.prev {left:-66px;}
+	.power_for .slick-arrow.next {right:-66px;}
+
+}
+
+
+/* 넓이가 1679px 이하일 때*/
+@media all and (max-width:1679px){
+
+	/* section */
+	.section .fp-tableCell {padding-right:120px;padding-left:120px;}
+	.section .inner {width:100%;margin:0;}
+	.go_scroll {left:30px;}
+
+	/* section01 */
+	.section01 .visual_txt .txt_group {top:150px;right:0;}
+
+	/* section02 */
+	.section02 .fp-tableCell {padding-right:150px;padding-left:150px;}
+	.section02 .inner {width:100%;}
+	.section02 .power_con {margin-top:40px;}
+	.power_for {margin-top:30px;}
+	.power_for .slick-arrow.prev {left:-76px;}
+	.power_for .slick-arrow.next {right:-76px;}
+	
+}
+
+
+/* 넓이가 1439px 이하일 때*/
+@media all and (max-width:1439px){
+
+	/* footbanner */
+	.footbanner {padding-left:30px;padding-right:30px;}
+	.footbanner .footbanner_wrap {width:100%;padding-left:152px;}
+	.footbanner .banner_slide li {margin:0 30px;}
+	.footer .fp-tableCell {}
+	
+	/* section05 */
+	.section05 .latest .group.group4 .conBox .link_box {padding-left:230px;}
+	.section05 .latest .group.group4 .conBox .link_box::before {width:200px;}
+}
+
+
+/* 넓이가 1359px 이하일 때*/
+@media all and (max-width:1359px){
+
+	/* section03 */
+	.shortcut h2 {margin-left:50px;}
+	.section03 .shortcut .con_wrap {padding-left:0;}
+	.shortcut .list div {margin-top:42px;}
+	.shortcut .list div a {padding-top:55px;}
+	.shortcut .list a br {display:block;}
+
+}
+
+
+/* 넓이가 1200px 이하일 때 */
+@media all and (max-width:1200px){
+
+	/* section */
+	.section .fp-tableCell {display:table-cell;}
+
+}
+
+
+/* 넓이가 1199px 이하일 때 */
+@media all and (max-width:1199px){
+
+	/* section */
+	.section .fp-tableCell {padding:70px 60px;}
+	.go_scroll {display:none;}
+	.main_wrap,
+	.fp-responsive .section02,
+	.fp-responsive .section02 .fp-tableCell,
+	.fp-responsive .section03,
+	.fp-responsive .section03 .fp-tableCell,
+	.fp-responsive .section04,
+	.fp-responsive .section04 .fp-tableCell,
+	.fp-responsive .section05,
+	.fp-responsive .section05 .fp-tableCell {height:auto !important;}
+	.section h2 {font-size:36px;}
+
+	/* section01 */
+	.section01 .fp-tableCell {padding-top:72px !important;padding-bottom:0;}
+	.section01 .go_scroll {display:block;}
+	.section01 .visual_txt .txt_group {top:30px;}
+	.section01 .visual_txt .eng {font-size:20px;}
+	.section01 .visual_txt .tit {font-size:48px;margin-bottom:23px;}
+	.section01 .visual_txt .txt {font-size:17px;}
+	.visual_control {left:30px;bottom:30px;}
+	.visual_img .visual_btn {left:111px;bottom:30px;}
+	.section01 .visual_txt .btn_main_play span {width:120px;height:120px;margin-top:20px;}
+	
+	/* section02 */
+	.section02 .fp-tableCell {padding-left:100px;padding-right:100px;}
+	.power_nav_wrap {margin:0;}
+	.graph_style {padding-left:195px;}
+	.graph_style .graph_info {font-size:15px;}
+
+}
+
+
+/* 넓이가 1024px 이하일 때*/
+@media all and (max-width:1024px){
+
+	/* section */
+	.section .fp-tableCell {padding:50px 32px;}
+	.section h2 {font-size:30px;letter-spacing:-1px;}
+
+	/* section01 */
+	.section01 .visual_txt .txt_group {right:18px;}
+	.section01 .visual_txt .eng {font-size:18px;}
+	.section01 .visual_txt .tit {font-size:36px;}
+	.section01 .visual_txt .txt {font-size:16px;}
+	.visual_control {width:44px;height:44px;border-radius:44px;}
+	.visual_control .btn_visual_start, 
+	.visual_control .btn_visual_stop {padding-top:42px;}
+	.visual_control .btn_visual_start::before {background-size:auto 20px;} 
+	.visual_control .btn_visual_stop::before {background-size:auto 17px;}
+	.visual_img .visual_btn {left:84px;width:152px;height:44px;border-radius:44px;}
+	.visual_btn > a {width:42px;height:42px;padding-top:42px;}
+	.visual_btn > a.prev, 
+	.visual_btn > a.btn_popup_prev {left:5px;}
+	.visual_btn > a.next, 
+	.visual_btn > a.btn_popup_next {right:5px;}
+	.visual_btn .visual_count {padding:11px 0;height:20px;}
+	.visual_btn .visual_count::after {height:30px;}
+	.visual_btn .visual_count .total {margin-top:2px;}
+	.section01 .visual_txt .btn_main_play span {width:100px;height:100px;}
+	
+	/* section02 */
+	.section02 .fp-tableCell {padding-left:80px;padding-right:80px;}
+	.section02 .date {right:3px;}
+	.section02 .power_con {margin-top:30px;}
+	.power_nav .slick-slide + .slick-slide {margin-left:15px;}
+	.power_for .slick-arrow {width:48px;height:48px;margin-top:-24px;}
+	.power_for .slick-slide {padding-left:10px;padding-right:10px;}
+	.power_for .slick-arrow.prev {left:-64px;}
+	.power_for .slick-arrow.next {right:-64px;}
+
+}
+
+
+/* 넓이가 768px 이하일 때*/
+@media all and (max-width:768px){
+
+	/* section */
+	.section .fp-tableCell {padding:36px 25px 40px;}
+	.section h2 {font-size:26px;}
+
+	/* section01 */
+	.section01 .go_scroll {display:none;}
+	.section01 .visual_txt .txt_group {top:24px;}
+	.section01 .visual_txt .eng {font-size:16px;}
+	.section01 .visual_txt .tit {font-size:24px;line-height:1.2;margin-bottom:12px;}
+	.section01 .visual_txt .tit strong {font-weight:700;}
+	.section01 .visual_txt .txt {font-size:14px;word-break:keep-all;word-wrap:break-word;}
+	.section01 .visual_txt .txt br {display:none;}
+	.visual_control {left:24px;bottom:24px;}
+	.visual_img .visual_btn {left:76px;bottom:24px;width:140px;}
+	.visual_btn .visual_count {padding:14px 0;}
+	.visual_btn .visual_count span {font-size:15px;}
+	.visual_btn .visual_count::after {height:24px;}
+	.visual_btn .visual_count .current {margin-top:-8px;padding-right:6px;}
+	.visual_btn .visual_count .total {margin-top:2px;padding-left:6px;}
+	.section01 .visual_txt .btn_main_play span {width:80px;height:80px;}
+
+	/* section02 */
+	.section02 .fp-tableCell {padding-top:75px !important;}
+	.section02 .date {right:50%;margin-right:-80px;top:-104px;padding-top:3px;}
+	.section02 .power_con {margin-top:20px;}
+	.power_nav_wrap {width:100%;}
+	.power_nav .slick-slide + .slick-slide {margin-left:14px;}
+	.power_for .slick-slide {padding:0;}
+	.power_for .slick-slide h3 {font-size:18px;}
+	.power_for .slick-slide .power_item {height:auto;min-height:290px;padding:20px 20px 20px;}
+	.power_for .slick-arrow {display:none !important;}
+	.power_for .slick-slide .more {top:8px;right:3px;}
+	/*
+	.graph_style {margin-top:20px;padding-left:165px;}
+	.graph_style .level {top:20px;width:145px;}
+	.graph_style .level .img {height:73px;background-size:100% auto;}
+	.graph_style .level .txt {font-size:24px;padding-top:20px;}
+	*/
+
+	/* footbanner */
+	.footbanner {padding:25px;}
+	.footbanner .banner_btn {width:100px;}
+	.footbanner .banner_btn > a {width:34px;height:34px;padding-top:32px;}
+	.footbanner .banner_btn > a::before {font-size:15px;line-height:32px;}
+	.footbanner .banner_control {width:34px;height:34px;}
+	.banner_control .btn_banner_start, 
+	.banner_control .btn_banner_stop {padding-top:32px;}
+	.footbanner .footbanner_wrap {padding-left:110px;}
+	.footbanner .banner_slide li {margin:0 15px;}
+	/*
+	.footbanner .footbanner_wrap .banner_slide img {height:34px;}
+	*/
+}
+
+
+/* 넓이가 600px 이하일 때*/
+@media all and (max-width:600px){
+
+	/* section01 */
+	.section01, 
+	.section01 .fp-tableCell {height:600px !important;}
+	
+}
+
+
+/* 넓이가 480px 이하일 때*/
+@media all and (max-width:480px){
+
+	/* section02 */
+	.power_nav .slick-track {width:100% !important;}
+	.power_nav .slick-slide + .slick-slide {margin-left:0;}
+	.power_nav .slick-slide {width:calc(50% - 10px);margin-bottom:15px;}
+	.power_nav .slick-slide:nth-child(2),
+	.power_nav .slick-slide:nth-child(4) {margin-left:20px !important;}
+	.power_for {margin-top:5px;}
+	.power_for .slick-slide {padding:0;}
+	.graph_style {padding-left:0;}
+	.graph_style .level {position:relative;left:auto;top:auto;/*width:173px;*/height:auto;margin:0 auto;}
+	/*
+	.graph_style .level .img {height:87px;}
+	.graph_style .level .txt {height:auto;font-size:20px;padding:10px 0;}
+	*/
+	.graph_style .graph {margin-top:15px;}
+	.graph_style .graph_info br {display:none;}
+	.graph_style .graph_list li {position:relative;padding-left:80px;}
+	.graph_style .graph_list li h4 {position:absolute;left:0;top:0;display:inline-block;}
+	.graph_style .graph_list .graph_wrap {margin-top:8px;}
+	.graph_style .graph_list .graph_figure {padding:0 86px 0 0;}
+	.table_group table {table-layout:fixed;}
+	.table_group tr {display:block;}
+	.table_group colgroup,
+	.table_group th {display:none;}
+	.table_group td {position:relative;display:block;padding:8px 15px 6px 85px !important;border:0 none;text-align:left;}
+	.table_group td::after {content:'';position:absolute;left:0;top:0;width:70px;height:100%;background-color:#f6f6f6;border-right:1px solid #e1e1e1;z-index:1;}
+  	.table_group td::before {content:attr(data-label);position:absolute;left:15px;top:50%;height:20px;margin-top:-10px;z-index:2;}
+	.smp_table .table_group td {padding-left:120px !important;}
+	.smp_table .table_group td::after {width:100px;}
+
+}
+
+
+/* 넓이가 359px 이하일 때*/
+@media all and (max-width:359px){
+
+	/* section */
+	.section h2 {font-size:22px;}
+	.section .fp-tableCell {padding:30px 20px;}
+
+	/* section02 */
+	.section02 .fp-tableCell {padding-top:65px !important;}
+	.section02 .date {top:-85px;}
+	.power_nav .slick-slide {width:calc(45% - 4px);margin-bottom:10px;}
+	.power_nav .slick-slide:nth-child(2),
+	.power_nav .slick-slide:nth-child(4) {width:calc(55% - 4px);margin-left:8px !important;}
+	.power_for {margin-top:10px;}
+	.power_for .slick-slide {padding:0;}
+	.power_nav a {padding-bottom:6px;height:30px;}
+	.power_nav .slick-current a {padding-right:18px;}
+
+}
+

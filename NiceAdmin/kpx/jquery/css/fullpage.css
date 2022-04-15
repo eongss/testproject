@@ -1,0 +1,97 @@
+#fullpage { position: relative;overflow: hidden; }
+#fullpage:before { display: none; position: absolute; width: 1px;height: 1000%; background: #fff; opacity: .5;content: "";left: 2.6rem;top: 50%;transform: translateY(-50%); z-index: 97;}
+html.fp-enabled { margin: 0; padding: 0; overflow:hidden; }
+.fp-enabled body {margin: 0;overflow:hidden;}
+
+.fp-section {position: relative;-webkit-box-sizing: border-box; /* Safari<=5 Android<=3 */-moz-box-sizing: border-box; /* <=28 */box-sizing: border-box;}
+.fp-slide {float: left;}
+.fp-slide, .fp-slidesContainer {height: 100%;display: block;}
+.fp-slides {z-index:1;height: 100%;overflow: hidden;position: relative;-webkit-transition: all 0.3s ease-out; /* Safari<=6 Android<=4.3 */transition: all 0.3s ease-out;}
+.fp-section.fp-table, .fp-slide.fp-table { display: table;table-layout: fixed;width: 100%; }
+.fp-tableCell { display: table-cell;vertical-align: middle;width: 100%;height: 100%;padding-top:0; overflow: hidden; }
+.fp-slidesContainer {float: left;position: relative;}
+.fp-controlArrow {-webkit-user-select: none; /* webkit (safari, chrome) browsers */-moz-user-select: none; /* mozilla browsers */-khtml-user-select: none; /* webkit (konqueror) browsers */-ms-user-select: none; /* IE10+ */position: absolute;z-index: 4;top: 50%;cursor: pointer;width: 0;height: 0;border-style: solid;margin-top: -38px;-webkit-transform: translate3d(0,0,0);-ms-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+.fp-controlArrow.fp-prev {left: 15px;width: 0;border-width: 38.5px 34px 38.5px 0;border-color: transparent #fff transparent transparent;}
+.fp-controlArrow.fp-next {right: 15px;border-width: 38.5px 0 38.5px 34px;border-color: transparent transparent transparent #fff;}
+.fp-scrollable {overflow: hidden;position: relative;}
+.fp-scroller{overflow: hidden;}
+.iScrollIndicator{border: 0 !important;}
+.fp-notransition {-webkit-transition: none !important;transition: none !important;}
+#fp-nav {position: fixed;z-index: 98;margin-top: -32px;top: 50%;opacity: 1;-webkit-transform: translate3d(0,0,0);-webkit-transform: translateY(-50%);transform: translateY(-50%);margin-top: 0 !important; }
+
+#fp-nav.fp-right {left: 2rem;}
+#fp-nav.fp-left {left: 17px;}
+.fp-slidesNav{position: absolute;z-index: 4;opacity: 1;-webkit-transform: translate3d(0,0,0);-ms-transform: translate3d(0,0,0);transform: translate3d(0,0,0);left: 0 !important;right: 0;margin: 0 auto !important;}
+.fp-slidesNav.fp-bottom {bottom: 17px;}
+.fp-slidesNav.fp-top {top: 17px;}
+
+#fp-nav ul { position: relative; }
+#fp-nav ul,.fp-slidesNav ul {margin: 0;padding: 0;}
+#fp-nav ul li,.fp-slidesNav ul li {display: block;position:relative; }
+#fp-nav ul li { margin-top: .75rem; }
+#fp-nav ul li:nth-child(5) { display: none; }
+#fp-nav ul li:first-of-type { margin-top: 0; }
+#fp-nav ul li:first-of-type+li+li+li+li+li+li { display: none; }
+.fp-slidesNav ul li {display: inline-block;}
+#fp-nav ul li a,.fp-slidesNav ul li a {display: inline-block;position: relative;z-index: 1;width: 1.25rem;height: 1.25rem;cursor: pointer;text-decoration: none;line-height: 51px; text-align: center; color:#fff;font-weight: 300;vertical-align: middle; }
+#fp-nav ul li a.active,.fp-slidesNav ul li a.active { color:#fff;font-weight: 500;background: url(/images/hit/layout/nav_arr.png) no-repeat; }
+#fp-nav ul li a.active { border: 1px solid #fff; }
+#fp-nav .fp-tooltip { display: none; }
+#fp-nav ul li a.active+.fp-tooltip { display: inline-block;vertical-align: middle;color:#fff;transform: rotate(90deg); }
+
+#fp-nav ul li a { position: relative;opacity: .8; }
+#fp-nav ul li a span.fp-sr-only { display: none; }
+#fp-nav ul li a span { display: block;width: .35rem;height: .35rem;background: #fff;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%); }
+
+
+#fp-nav ul li:hover .fp-tooltip,
+#fp-nav ul li .fp-tooltip.fp-left {left: 20px;}
+.fp-auto-height.fp-section,
+.fp-auto-height .fp-slide,
+.fp-auto-height .fp-tableCell{height: auto !important;}
+
+.fp-responsive .fp-auto-height-responsive.fp-section,
+.fp-responsive .fp-auto-height-responsive .fp-slide,
+.fp-responsive .fp-auto-height-responsive .fp-tableCell {height: auto !important;}
+
+.fp-viewing-secondPage #fp-nav ul li a.active, .fp-slidesNav ul li a.active { border: 1px solid #000; }
+.fp-viewing-secondPage #fp-nav ul li a span { background: #000; }
+.fp-viewing-secondPage #fp-nav ul li a.active+.fp-tooltip { color:#000; }
+.fp-viewing-secondPage #fullpage:before { background: #000; }
+/* .fp-viewing-4rdPage #fp-nav ul li a.active, .fp-slidesNav ul li a.active { border: 1px solid #000; }
+.fp-viewing-4rdPage #fp-nav ul li a span { background: #000; }
+.fp-viewing-4rdPage #fp-nav ul li a.active+.fp-tooltip { color:#000; }
+.fp-viewing-4rdPage #fullpage:before { background: #000; } */
+.fp-viewing-7rdPage #fp-nav { display: none; }
+.fp-viewing-6rdPage #fp-nav:after { display: block; content: ""; position: absolute; bottom:-55px;left:50%; background: url(/images/hit/main/scroll_img.png) no-repeat;width:20px;height: 41px;margin-left: -2px; -webkit-transition: all .5s linear;transition: all .5s linear;-webkit-animation: down 1s ease infinite;animation: down 1s ease infinite;}
+
+@keyframes down {
+  0% {transform: translateY(0); -webkit-transform: translateY(0);}
+  50% {transform: translateY(-5px); -webkit-transform: translateY(-5px);}
+  100% {transform: translateY(0); -webkit-transform: translateY(0);}
+}
+
+
+@media (max-width:1720px){
+  #fp-nav.fp-right { display: none !important; }
+  #fullpage:before { display:none; }
+}
+
+@media (max-width:1200px){
+    .fp-enabled body { padding-right: 0; }
+    .fp-enabled #header { padding-right: 0; }
+    .fp-tableCell { display: block; padding-top: 0;}
+
+    #section01, #section02, #section03, #section04, #section05 { display:block;height: auto !important;padding: 4rem 0; }
+    #section01 .fp-tableCell, #section02 .fp-tableCell, #section03 .fp-tableCell, #section04 .fp-tableCell, #section05 .fp-tableCell { height: auto !important;display: block;table-layout: auto; }
+    #section01 { padding:9.2rem 0 0 0; }
+    #section01 .fp-tableCell { height: 50rem !important; }
+}
+
+
+@media (max-width:767px){
+  #section02, #section03, #section04, #section05 { padding:2.5rem 0; }
+  #section01 .fp-tableCell { height: 30rem !important; }
+}
+
+

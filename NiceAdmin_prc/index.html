@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.2.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <!-- 공통 CSS -->
+	<link rel="stylesheet" href="/kpx/main/css/default.css" />
+	<!-- <link rel="stylesheet" href="/kpx/main/css/layout.css" /> -->
+	<!-- <link rel="stylesheet" href="/kpx/main/css/layout_respond.css" /> -->
+
+	<!-- 메인 CSS -->
+	<link rel="stylesheet" href="/kpx/main/css/main.css" />
+	<link rel="stylesheet" href="/kpx/main/css/main_respond.css" />
+	<link rel="stylesheet" href="/kpx/main/css/main_es.css" />
+
+	<link rel="stylesheet" type="text/css" href="/kpx/jquery/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/kpx/jquery/css/fullpage.css">
+	<!-- section1 슬라이더 관련 css -->
+  <link rel="stylesheet" href="/kpx/jquery/css/jquery.bxslider.css" />
+	<!-- 공통 JS -->
+	<script src="/kpx/jquery/js/jquery-1.12.4.min.js"></script>
+	<script src="/kpx/jquery/js/jquery.fullPage.min.js"></script>
+	<!-- <script src="/kpx/js/global.js"></script> -->
+	<script src="/kpx/jquery/js/jquery.bxslider.min.js"></script>
+	<script src="/kpx/jquery/js/slick.js"></script>
+	<!-- <script src="/kpx/ease_src/js/captchaboard.js"></script> -->
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">NiceAdmin</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              You have 4 new notifications
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Lorem Ipsum</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>30 min. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Atque rerum nesciunt</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>1 hr. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Sit rerum fuga</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>2 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Dicta reprehenderit</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>4 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
+
+          </ul><!-- End Notification Dropdown Items -->
+
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span>
+          </a><!-- End Messages Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              You have 3 new messages
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Maria Hudson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Anna Nelson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>6 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>David Muldon</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>8 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="dropdown-footer">
+              <a href="#">Show all messages</a>
+            </li>
+
+          </ul><!-- End Messages Dropdown Items -->
+
+        </li><!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+              <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+
+  <main id="main" class="main">
+    <div class="main_wrap">
+
+      <!-- section01 -->
+      <div class="section section01" data-anchor="section-1st">
+        <div class="visual_txt">
+          <div class="inner">
+            <div class="txt_group">
+              <span class="eng">KOREA POWER EXCHANGE</span>
+              <div class="tit">친환경 미래를 선도하는 <br><strong>전력 비즈니스 융합 플랫폼</strong></div>
+              <div class="txt"><strong>전력거래소</strong>는 국민과 국가에 <strong>공정</strong>하고 <strong>투명한
+                  전력시장</strong>과 <br><strong>안정적인 전력수급</strong>을 약속합니다!</div>
+            </div>
+          </div>
+        </div>
+        <div class="visual_img">
+
+          <ul class="visual_slide">
+            <li style="background-image:url(/kpx/upload/visual/a1/20211228134503032.jpg);"></li>
+            <li style="background-image:url(/kpx/upload/visual/a1/20211228134533996.jpg);"></li>
+            <li style="background-image:url(/kpx/upload/visual/a1/20211206195336790.png);"></li>
+            <li style="background-image:url(/kpx/upload/visual/a1/20211228134602428.jpg);"></li>
+          </ul>
+
+          <div class="visual_control">
+            <a href="" class="btn_visual_start">재생</a>
+            <a href="" class="btn_visual_stop">정지</a>
+          </div>
+
+          <div class="visual_btn">
+            <a href="#none" class="prev">이전</a>
+            <div class="visual_count"><span class="current">1</span><span class="total">1</span></div>
+            <a href="#none" class="next">다음</a>
+          </div>
+        </div>
+        <button type="button" class="go_scroll">SCROLL DOWN</button>
+
+      </div>
+      <!-- //section01 -->
+
+      <!-- section02 -->
+      <div class="section section02" data-anchor="section-2nd">
+        <div class="inner">
+          <h2>오늘의 <span>전력정보</span></h2>
+          <div class="power_con">
+            <!-- <div class="date">
+              <span>2021년 09월 18일</span>
+              <button type="button">실시간 새로고침</button>
+            </div> -->
+            <div class="power_nav_wrap">
+              <div class="power_nav">
+                <a href="javascript:void(0);"><span>최대부하전망</span></a>
+                <a href="javascript:void(0);"><span>실시간전력수급현황</span></a>
+                <a href="javascript:void(0);"><span>오늘의 SMP</span></a>
+                <a href="javascript:void(0);"><span>오늘의 REC</span></a>
+              </div>
+            </div>
+            <div class="power_for">
+              <div class="power_item item01">
+                <h3>최대부하전망</h3>
+
+                <div class="graph_style">
+                  <div class="level level01">
+                    <span class="img"></span>
+                    <strong class="txt">정상</strong>
+                  </div>
+                  <div class="graph">
+                    <div class="graph_info">
+                      피크예상시간은 <strong>16~17</strong>시, <br>
+                      최대전력은 <strong>71,000</strong>MW로 예상됩니다.
+                    </div>
+                    <ul class="graph_list">
+                      <li class="graph02">
+                        <h4>최대부하</h4>
+                        <div class="graph_figure">
+
+                          <div class="graph_wrap"><span class="graph_bar"
+                              style="width:71%;"></span></div>
+                          <div class="graph_value">71,000 MW</div>
+                        </div>
+                      </li>
+                      <li class="graph03">
+                        <h4>공급예비력</h4>
+                        <div class="graph_figure">
+
+                          <div class="graph_wrap"><span class="graph_bar"
+                              style="width:19%;"></span></div>
+                          <div class="graph_value">13,246 MW</div>
+                        </div>
+                      </li>
+                      <li class="graph04">
+                        <h4>공급예비율</h4>
+                        <div class="graph_figure">
+
+                          <div class="graph_wrap"><span class="graph_bar"
+                              style="width:19%;"></span></div>
+                          <div class="graph_value">19%</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <a href="/menu.es?mid=a10606010000" class="more">최대부하전망 더보기</a>
+              </div>
+              <div class="power_item item02">
+                <h3>실시간전력수급현황</h3>
+
+                <div class="graph_style">
+                  <div class="level level01">
+                    <span class="img"></span>
+                    <strong class="txt">정상</strong>
+                  </div>
+                  <div class="graph">
+                    <ul class="graph_list">
+                      <li class="graph01">
+                        <h4>공급능력</h4>
+                        <div class="graph_figure">
+
+                          <div class="graph_wrap"><span class="graph_bar"
+                              style="width:84%;"></span></div>
+                          <div class="graph_value">84,270 MW</div>
+                        </div>
+                      </li>
+                      <li class="graph02">
+                        <h4>현재부하</h4>
+                        <div class="graph_figure">
+
+                          <div class="graph_wrap"><span class="graph_bar"
+                              style="width:71%;"></span></div>
+                          <div class="graph_value">70,939 MW</div>
+                        </div>
+                      </li>
+                      <li class="graph03">
+                        <h4>공급예비력</h4>
+                        <div class="graph_figure">
+
+                          <div class="graph_wrap"><span class="graph_bar"
+                              style="width:13%;"></span></div>
+                          <div class="graph_value">13,331 MW</div>
+                        </div>
+                      </li>
+                      <li class="graph04">
+                        <h4>공급예비율</h4>
+                        <div class="graph_figure">
+
+                          <div class="graph_wrap"><span class="graph_bar"
+                              style="width:18.79%;"></span></div>
+                          <div class="graph_value">18.79 %</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <a href="/menu.es?mid=a10606030000" class="more">실시간전력수급현황 더보기</a>
+              </div>
+              <div class="power_item item03">
+                <h3>오늘의 SMP</h3>
+
+                <div class="table_style smp_table">
+                  <div class="latest">
+                    <article class="group group1">
+                      <h4 class="label"><a href="">육지</a></h4>
+                      <div class="table_group">
+                        <span class="txt_right">(단위 : 원/kWh)</span>
+                        <table>
+                          <caption>오늘의 SMP(육지) - 거래일, 최고가, 최소가, 평균가</caption>
+                          <colgroup>
+                            <col style="width:133px;">
+                            <col style="width:auto;">
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="row">거래일</th>
+                              <td data-label="거래일">2022.04.13(수)</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">최고가</th>
+                              <td data-label="최고가">206.49</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">최소가</th>
+                              <td data-label="최소가">194.65</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">평균가</th>
+                              <td data-label="평균가">202.61</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </article>
+                    <article class="group group2">
+                      <h4 class="label"><a href="">제주</a></h4>
+                      <div class="table_group">
+                        <span class="txt_right">(단위 : 원/kWh)</span>
+                        <table>
+                          <colgroup>
+                            <col style="width:133px;">
+                            <col style="width:auto;">
+                          </colgroup>
+                          <caption>오늘의 SMP(제주) - 거래일, 최고가, 최소가, 평균가</caption>
+                          <tbody>
+                            <tr>
+                              <th scope="row">거래일</th>
+                              <td aria-label="거래일">2022.04.13(수)</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">최고가</th>
+                              <td aria-label="최고가">299.1</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">최소가</th>
+                              <td aria-label="최소가">215.19</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">평균가</th>
+                              <td aria-label="평균가">257.64</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <a href="/menu.es?mid=a10606080100" class="more">오늘의 SMP 더보기</a>
+              </div>
+              <div class="power_item item04">
+                <h3>오늘의 REC</h3>
+
+                <div class="table_style rec_table">
+                  <p>1REC = 1MWh(가중치에 따라 변동)</p>
+                  <div class="table_group">
+                    <span class="txt_left">※ 매주 화, 목요일 10 : 00 ~ 16 : 00 개장</span>
+                    <span class="txt_right">(단위:REC, 원/REC)</span>
+                    <table>
+                      <caption>오늘의 REC - 거래일, 거래량, 평균가, 최고가, 최저가, 종가</caption>
+                      <colgroup>
+                        <col style="width:73px;">
+                        <col style="width:auto;">
+                        <col style="width:73px;">
+                        <col style="width:auto;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">거래일</th>
+                          <td data-label="거래일">2022.04.12(화)</td>
+                          <th scope="row">거래량</th>
+                          <td data-label="거래량"> 167,316</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">평균가</th>
+                          <td data-label="평균가"> 53,909</td>
+                          <th scope="row">최고가</th>
+                          <td data-label="최고가"> 54,500</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">최저가</th>
+                          <td data-label="최저가"> 50,000</td>
+                          <th scope="row">종가</th>
+                          <td data-label="종가"> 54,100</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="go_scroll">SCROLL DOWN</button>
+      </div>
+      <!-- //section02 -->
+
+    </div>
+    
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.min.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+  <!--[if lt IE 9]><script src="/js/html5.js"></script><![endif]-->
+	<link rel="stylesheet" href="/kpx/css/printArea.css" media="print" />
+	<!-- 공통 JS -->
+	<script src="/kpx/main/js/layout.js"></script>
+	<!-- 메인 JS -->
+	<script src="/kpx/main/js/main.js"></script>
+
+
+</body>
+
+</html>

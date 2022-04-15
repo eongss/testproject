@@ -1,0 +1,26 @@
+@charset "utf-8";
+/** fonts style - NanumMyeongjo **/
+@font-face {
+	font-family: 'NanumMyeongjo'; font-style: normal; font-weight: 300;
+	src: url(./NanumMyeongjo/NanumMyeongjo.eot);
+	src: local('NanumMyeongjo Light'), local('NanumMyeongjo'), 
+	url(./NanumMyeongjo/NanumMyeongjo.eot?#iefix) format('embedded-opentype'), 
+	url(./NanumMyeongjo/NanumMyeongjo.woff2) format('woff2'), 
+	url(./NanumMyeongjo/NanumMyeongjo.woff) format('woff');
+}
+@font-face {
+	font-family: 'NanumMyeongjo'; font-style: normal; font-weight: 700;
+	src: url(./NanumMyeongjo/NanumMyeongjoBold.eot);
+	src: local('NanumMyeongjo Bold'), local('NanumMyeongjoBold'), 
+	url(./NanumMyeongjo/NanumMyeongjoBold.eot?#iefix) format('embedded-opentype'), 
+	url(./NanumMyeongjo/NanumMyeongjoBold.woff2) format('woff2'), 
+	url(./NanumMyeongjo/NanumMyeongjoBold.woff) format('woff');
+}
+@font-face {
+	font-family: 'NanumMyeongjo'; font-style: normal; font-weight: 900;
+	src: url(./NanumMyeongjo/NanumMyeongjoExtraBold.eot);
+	src: local('NanumMyeongjo Black'), local('NanumMyeongjoExtraBold'), 
+	url(./NanumMyeongjo/NanumMyeongjoExtraBold.eot?#iefix) format('embedded-opentype'), 
+	url(./NanumMyeongjo/NanumMyeongjoExtraBold.woff2) format('woff2'), 
+	url(./NanumMyeongjo/NanumMyeongjoExtraBold.woff) format('woff');
+}

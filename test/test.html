@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- slick 슬라이더 관련 파일 -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- //slick 슬라이더 관련 파일 -->
+
+    <script>
+        $(document).ready(function () {
+            // slick 슬라이더 옵션 설정
+            $('.slider').slick({
+                // autoplay: false,
+                // autoplaySpeed: 1000,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            });
+        });
+    </script>
+
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .slider {
+            width: 500px;
+            margin: 0px auto;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: #444444;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="slider">
+        <div><img src="images/slider-1920x1080-01.png" alt="">a</div>
+        <div><img src="images/slider-1920x1080-02.png" alt="">b</div>
+        <div><img src="images/slider-1920x1080-03.png" alt="">c</div>
+        <div><img src="images/slider-1920x1080-04.png" alt="">d</div>
+        <div><img src="images/slider-1920x1080-05.png" alt="">e</div>
+        <div><img src="images/slider-1920x1080-06.png" alt="">f</div>
+    </div>
+    
+
+</body>
+
+
+
+
+
+</html>
