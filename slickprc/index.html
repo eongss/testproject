@@ -12,7 +12,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <style>
-    body,input,textarea,button,select,table,h1,h2,h3,h4,h5,h6{font-family:'Noto Sans KR', 'Nanum Gothic', Arial, sans-serif;font-size:15px;font-weight:400;line-height:1.4;color:#555;}
+    body,input,textarea,button,select,table,h1,h2,h3,h4,h5,h6{font-family:'Noto Sans KR', 'Nanum Gothic', Arial, sans-serif;font-size:14px;font-weight:400;line-height:1.4;color:#555;}
     html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,form,fieldset,legend,button,input,select,optgroup,textarea,label,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,strong{margin:0; padding:0; box-sizing:border-box; letter-spacing:-0.5px;}
 
     .table_style p {width:100%;height:32px;padding-top:6px;text-align:center;color:#fff;background:#387fd6;}
@@ -22,7 +22,7 @@
     .table_group .txt_right {float:right;}
     .table_group table {clear:both;width:100%;table-layout:fixed;border-bottom:1px solid #e1e1e1;}
     .table_group table th,
-    .table_group table td {color:#565656;padding:14px 15px 13px;border-top:1px solid #e1e1e1;text-align:left;background-color:#fff;}
+    .table_group table td {color:#565656;padding:13px 14px 12px;border-top:1px solid #e1e1e1;text-align:left;background-color:#fff;}
     .table_group table th {padding-left:17px;font-weight:400;background-color:#f6f6f6;border-right:1px solid #e1e1e1;}
 
     .smp_table .latest {position:relative;padding-top:32px;}
@@ -33,8 +33,9 @@
     .smp_table .latest .group2 .label a {border-left-width:0;border-right-width:1px;}
     .smp_table .latest .active .label a {padding:4px 0 0 14px;border:2px solid #7c7c7c !important;font-weight:700;color:#333;}
     .smp_table .latest .active .label a::after {right:18px;top:11px;background-image:url(../img/main/bul_smp_active.png);}
-    .smp_table .latest .active .table_group {display:block;}
-    .smp_table .latest .table_group {display:none;}
+    /* .smp_table .latest .active .table_group {display:block;} */
+    .smp_table .latest .table_group {display: none;}
+    .smp_table .latest #land_table {display: block;}
     .smp_table .table_group table th,
     .smp_table .table_group table td {padding-top:9px;padding-bottom:6px;}
     .smp_table .table_group table tr:first-child th,
@@ -42,7 +43,7 @@
     .smp_table .table_group table td {padding-left:23px;}
 
     /* .section {position:absolute;} */
-    .section .inner {width:1820px;margin:0 auto;padding-bottom: 50px;padding-top: 50px;}
+    .section .inner {width:1820px;margin:0 auto;padding-bottom: 100px;padding-top: 50px;}
     /* .section .fp-tableCell {-webkit-box-orient:vertical;flex-direction:column;padding:92px 0 0;} */
     .section h2 {font-size:48px;color:#fff;font-weight:400;letter-spacing:-4px;}
     .section h2 span {font-weight:900;}
@@ -120,7 +121,7 @@
     .graph_style .graph_info {font-size:16px;line-height:1.5;letter-spacing:-1px;padding-bottom:1px;}
     .graph_style .graph_info strong {font-weight:900;}
     .graph_style .graph_list {padding-top:13px;}
-    .graph_style .graph_list li {clear:both;}
+    .graph_style .graph_list li {clear:both; list-style:none}
     .graph_style .graph_list h4 {display:block;}
     .graph_style .graph_list h4::before {content:'·';margin:0 4px 0 3px;}
     .graph_style .graph_list .graph_figure {clear:both;position:relative;width:100%;height:28px;padding:0 90px 0 12px;}
@@ -258,8 +259,8 @@
               <div class="table_style smp_table">
                 <div class="latest">
                   <article class="group group1">
-                    <h4 class="label"><a href="">육지</a></h4>
-                    <div class="table_group">
+                    <h4 class="label"><a href="#" id="land">육지</a></h4>
+                    <div class="table_group" id="land_table">
                       <span class="txt_right">(단위 : 원/kWh)</span>
                       <table>
                         <caption>오늘의 SMP(육지) - 거래일, 최고가, 최소가, 평균가</caption>
@@ -289,8 +290,8 @@
                     </div>
                   </article>
                   <article class="group group2">
-                    <h4 class="label"><a href="">제주</a></h4>
-                    <div class="table_group">
+                    <h4 class="label"><a href="#" id="jeju">제주</a></h4>
+                    <div class="table_group" id="jeju_table">
                       <span class="txt_right">(단위 : 원/kWh)</span>
                       <table>
                         <colgroup>
@@ -380,6 +381,8 @@
 
   </script> -->
 
+  
+
   <script type="text/javascript">
     //오늘의 전력정보
     $('.power_for').slick({
@@ -436,6 +439,24 @@
     });
 
     // $('.power_for').slick('goTo', 1);
+
+    $("#land").on("click", function() {
+      $(".smp_table .latest #land_table").css({
+          "display":"block",
+      });
+      // $(".smp_table .latest #jeju_table").css({
+      //     "display":"none",
+      // });
+    });
+
+    $("#jeju").on("click", function() {
+      $(".smp_table .latest #jeju_table").css({
+          "display":"block",
+      });
+      $(".smp_table .latest #land_table").css({
+          "display":"none",
+      });
+    });
   </script>
 
 </body>
