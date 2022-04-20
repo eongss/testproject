@@ -35,14 +35,49 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  
 
   <!-- 슬릭 슬라이더 관련 -->
   <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+  <!-- xeicon -->
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 
+  <!-- 슬릭 슬라이더 css -->
+  <style>
+    /* 슬릭 버튼 관련 */
+    .power_for { position:relative; margin-top: 42px;}
+    .power_for button { position:absolute; z-index:10; top:50%; 
+      transform:translateY(-50%); width: 71px; height: 71px; border-radius: 100%;
+      background-color: rgba(0, 0, 0, .1); /*border: none;*/ border-color: #fff;
+    }
+    .power_for button::before { font-family: 'xeicon'; color: #fff; font-size: 20px;}
+    .power_for button.slick-prev { left:-80px; font-size: 0; color: transparent;}
+    .power_for button.slick-prev::before { content:"\e93c";}
+    .power_for button.slick-next {right:-80px; font-size: 0; color: transparent;}
+    .power_for button.slick-next::before { content:"\e93f";}
+    /* //슬릭 버튼 관련 */
+    
+    .power_item { margin:0 10px;}
+
+    .power_nav_wrap { display:flex; justify-content:center;}
+    
+    .inner h2 { text-align: center; color: #fff;}
+    .inner h2 span { font-weight:900;}
+
+    .power_nav_wrap .dots { margin-left:28px; color:#fff; font-weight:900;}
+
+    .power_con { margin-top:53px;}
+
+    .fp-tableCell { background:#113561 url(kpx/img/bg_section02.png) left bottom no-repeat; 
+      height:600px; padding:51px 140px 0;
+    }
+
+    
+    </style>
 </head>
 
 <body>
@@ -530,7 +565,7 @@
           <div class="row">
             
             <!-- 임시1 -->
-            <div class="col-12">
+            <!-- <div class="col-12">
               <div class="card">
 
                 <div class="filter">
@@ -547,10 +582,10 @@
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title">Reports <span>/Today</span></h5>
+                  <h5 class="card-title">Reports <span>/Today</span></h5> -->
 
                   <!-- Line Chart -->
-                  <div id="reportsChart"></div>
+                  <!-- <div id="reportsChart"></div>
 
                   <script>
                     document.addEventListener("DOMContentLoaded", () => {
@@ -603,12 +638,12 @@
                         }
                       }).render();
                     });
-                  </script>
+                  </script> -->
                   <!-- End Line Chart -->
 
-                </div>
+                <!-- </div>
 
-              </div>
+              </div> -->
             </div><!-- End Reports -->
 
             <!-- 전력거래소 컨텐츠 -->
@@ -628,22 +663,34 @@
                   </ul>
                 </div>
 
-                <div style="background:#113561 url(kpx/img/bg_section02.png) left bottom no-repeat; height:600px;">
+                <div class="fp-tableCell">
                   <div class="inner">
                     <h2>오늘의<span>전력정보</span></h2>
                     <div class="power_con">
                       
                       <!-- 전력거래소 slick slider 네비 -->
                       <div class="power_nav_wrap">
-                        <a href=""><span>최대부하전망</span></a>
-                        <a href=""><span>실시간전력수급현황</span></a>
-                        <a href=""><span>오늘의 SMP</span></a>
-                        <a href=""><span>오늘의 REC</span></a>
+                        <div class="dots">
+                          <a href="">최대부하전망</a>
+                          <!-- <p>최대부하전망</p> -->
+                        </div>
+                        <div class="dots">
+                          <!-- <p>실시간전력수급현황</p> -->
+                          <a href="">실시간전력수급현황</a>
+                        </div>
+                        <div class="dots">
+                          <!-- <p>오늘의 SMP</p> -->
+                          <a href="">오늘의 SMP</a>
+                        </div>
+                        <div class="dots">
+                          <!-- <p>오늘의 REC</p> -->
+                          <a href="">오늘의 REC</a>
+                        </div>
                       </div>
                       
                       <!-- 전력거래소 slick slider 메인 -->
                       <div class="power_for">
-                        <div class="power_item item01">
+                        <div class="power_item item01" style="background-color:#fff;">
                           <h3>최대부하전망</h3>
 
                           <div class="graph_style">
@@ -657,26 +704,50 @@
                                 피크예상시간은 <strong>16~17</strong>시, <br>
                                 최대전력은 <strong>71,000</strong>MW로 예상됩니다.
                               </div>
-                              <ul class="graph_list">
-                                <li class="graph02">
-                                  <h4>최대부하</h4>
-                                  <div class="graph_figure">
-                                    <div class="graph_wrap">
-                                      <span class="graph_bar" style="width: 71%;"></span>
-                                    </div>
-                                    <div class="graph_value">71,000 MW</div>
-                                  </div>
-                                </li>
-                              </ul>
+                              <div class="card-body">
+
+                                <h4 class="small font-weight-bold">최대부하 <span class="float-right">71,000 MW</span>
+                                </h4>
+                                <div class="progress mb-4" style="background: #d7d7d7;">
+                                  <div class="progress-bar" role="progressbar" style="width: 20%;background-color: #23b579;"
+                                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                
+                                <h4 class="small font-weight-bold">공급예비력<span class="float-right">13,246 MW</span>
+                                </h4>
+                                <div class="progress mb-4" style="background: #d7d7d7;">
+                                  <div class="progress-bar" role="progressbar" style="width: 20%;background-color: #b55dec;"
+                                  aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                
+                                <h4 class="small font-weight-bold">공급예비율 <span class="float-right">19%</span>
+                                </h4>
+                                <div class="progress mb-4" style="background: #d7d7d7;">
+                                  <div class="progress-bar" role="progressbar" style="width: 20%;background-color: #67b0f5;"
+                                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+
+                              </div>
                             </div>
                           </div>
                           <a href="">최대부하전망 더보기 버튼</a>
                         </div>
+
+                        <div class="power_item item02" style="background-color:#fff">
+                          <div>실시간전력수급현황</div>
+                        </div>
+
+                        <div class="power_item item03" style="background-color:#fff">
+                          <div>오늘의 SMP</div>
+                        </div>
+
+                        <div class="power_item item04" style="background-color:#fff">
+                          <div>오늘의 REC</div>
+                        </div>
+
                       </div>
                     </div>
                   </div>
-
-
 
                 </div>
 
@@ -716,6 +787,28 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- 슬릭 슬라이더 설정 부분 -->
+  <script>
+    $('.power_for').slick({
+      // dots:true,
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+    });
+
+    $('.power_for').slick('slickGoTo', 3);
+
+    $('.dots').click(function() {
+
+      var indexNum = $(this).index();
+      console.log(indexNum);
+
+      $('.power_for').slick('slickGoTo',indexNum-1);
+
+    });
+
+  </script>
 
 </body>
 
