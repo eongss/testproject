@@ -95,7 +95,7 @@
     .graph_style .level .img {
       display: block;
       position: relative;
-      width: 100%;
+      width: 178px;
       height: 129px;
       background: url(kpx/img/bg_level.png) center top no-repeat;
       
@@ -106,15 +106,16 @@
       position: absolute;
       width: 23px;
       height: 61px;
-      left: 98px;
-      bottom: 30px;
+      left: 78px;
+      bottom: 23px;
     }
 
-    /* .graph_style .level strong {
-      position: relative;
+    .graph_style .level .txt {
+      /* position: relative; */
       display: block;
-      width: 100%;
-    } */
+      /* width: 100%; */
+      text-align: center;
+    }
 
     .table_group {
       padding-top: 35px;
@@ -177,6 +178,15 @@
       left: 50%;
     }
 
+    .progress {
+      height: 4px;
+    }
+
+    .more {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
 
     
     </style>
@@ -413,242 +423,7 @@
 
   </header><!-- End Header -->
 
-  <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
-
-    <ul class="sidebar-nav" id="sidebar-nav">
-
-      <li class="nav-item">
-        <a class="nav-link " href="index.html">
-          <i class="bi bi-grid"></i>
-          <span>Dashboard</span>
-        </a>
-      </li><!-- End Dashboard Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-button-wide"></i><span>Components</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="components-alerts.html">
-              <i class="bi bi-circle"></i><span>Alerts</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-accordion.html">
-              <i class="bi bi-circle"></i><span>Accordion</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-badges.html">
-              <i class="bi bi-circle"></i><span>Badges</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-breadcrumbs.html">
-              <i class="bi bi-circle"></i><span>Breadcrumbs</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-buttons.html">
-              <i class="bi bi-circle"></i><span>Buttons</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-cards.html">
-              <i class="bi bi-circle"></i><span>Cards</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-carousel.html">
-              <i class="bi bi-circle"></i><span>Carousel</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-list-group.html">
-              <i class="bi bi-circle"></i><span>List group</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-modal.html">
-              <i class="bi bi-circle"></i><span>Modal</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-tabs.html">
-              <i class="bi bi-circle"></i><span>Tabs</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-pagination.html">
-              <i class="bi bi-circle"></i><span>Pagination</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-progress.html">
-              <i class="bi bi-circle"></i><span>Progress</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-spinners.html">
-              <i class="bi bi-circle"></i><span>Spinners</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-tooltips.html">
-              <i class="bi bi-circle"></i><span>Tooltips</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Components Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="forms-elements.html">
-              <i class="bi bi-circle"></i><span>Form Elements</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-layouts.html">
-              <i class="bi bi-circle"></i><span>Form Layouts</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-editors.html">
-              <i class="bi bi-circle"></i><span>Form Editors</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-validation.html">
-              <i class="bi bi-circle"></i><span>Form Validation</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Forms Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="tables-general.html">
-              <i class="bi bi-circle"></i><span>General Tables</span>
-            </a>
-          </li>
-          <li>
-            <a href="tables-data.html">
-              <i class="bi bi-circle"></i><span>Data Tables</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Tables Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="charts-chartjs.html">
-              <i class="bi bi-circle"></i><span>Chart.js</span>
-            </a>
-          </li>
-          <li>
-            <a href="charts-apexcharts.html">
-              <i class="bi bi-circle"></i><span>ApexCharts</span>
-            </a>
-          </li>
-          <li>
-            <a href="charts-echarts.html">
-              <i class="bi bi-circle"></i><span>ECharts</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Charts Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="icons-bootstrap.html">
-              <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
-            </a>
-          </li>
-          <li>
-            <a href="icons-remix.html">
-              <i class="bi bi-circle"></i><span>Remix Icons</span>
-            </a>
-          </li>
-          <li>
-            <a href="icons-boxicons.html">
-              <i class="bi bi-circle"></i><span>Boxicons</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Icons Nav -->
-
-      <li class="nav-heading">Pages</li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
-          <i class="bi bi-person"></i>
-          <span>Profile</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.html">
-          <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
-        </a>
-      </li><!-- End F.A.Q Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
-          <i class="bi bi-envelope"></i>
-          <span>Contact</span>
-        </a>
-      </li><!-- End Contact Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-register.html">
-          <i class="bi bi-card-list"></i>
-          <span>Register</span>
-        </a>
-      </li><!-- End Register Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-login.html">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Login</span>
-        </a>
-      </li><!-- End Login Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-error-404.html">
-          <i class="bi bi-dash-circle"></i>
-          <span>Error 404</span>
-        </a>
-      </li><!-- End Error 404 Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-blank.html">
-          <i class="bi bi-file-earmark"></i>
-          <span>Blank</span>
-        </a>
-      </li><!-- End Blank Page Nav -->
-
-    </ul>
-
-  </aside><!-- End Sidebar-->
+  
 
   <main id="main" class="main">
 
@@ -795,12 +570,12 @@
                         <div class="power_item item01" >
                           <h3>최대부하전망</h3>
 
-                          <div class="graph_style">
-                            <div class="level level01">
+                          <div class="graph_style" style="display: flex;">
+                            <div class="level level01" style="flex-grow: 1;">
                               <span class="img"></span>
                               <strong class="txt">정상</strong>
                             </div>
-                            <div class="graph">
+                            <div class="graph" style="flex-grow: 1;">
                               <div class="graph_info">
                                 피크예상시간은 <strong>16~17</strong>시, <br>
                                 최대전력은 <strong>71,000</strong>MW로 예상됩니다.
@@ -831,11 +606,52 @@
                               </div>
                             </div>
                           </div>
-                          <a href="">최대부하전망 더보기 버튼</a>
+                          <a class="more" href="">최대부하전망 더보기 버튼</a>
                         </div>
 
                         <div class="power_item item02" style="background-color:#fff">
-                          <h3>실시간전력수급현황</h3>
+                            <h3>실시간전력수급현황</h3>
+  
+                            <div class="graph_style" style="display:flex;">
+                              <div class="level level01" style="flex-grow: 1";>
+                                <span class="img"></span>
+                                <strong class="txt">정상</strong>
+                              </div>
+                              <div class="graph" style="flex-grow: 2";>
+                                <div class="card-body">
+  
+                                  <h4 class="small font-weight-bold">공급능력 <span class="float-right">71,000 MW</span>
+                                  </h4>
+                                  <div class="progress mb-4" style="background: #d7d7d7;">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%;background-color: #f2a14a;"
+                                      aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+  
+                                  <h4 class="small font-weight-bold">현재부하 <span class="float-right">71,000 MW</span>
+                                  </h4>
+                                  <div class="progress mb-4" style="background: #d7d7d7;">
+                                    <div class="progress-bar" role="progressbar" style="width: 20%;background-color: #23b579;"
+                                      aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+                                  
+                                  <h4 class="small font-weight-bold">공급예비력<span class="float-right">13,246 MW</span>
+                                  </h4>
+                                  <div class="progress mb-4" style="background: #d7d7d7;">
+                                    <div class="progress-bar" role="progressbar" style="width: 20%;background-color: #b55dec;"
+                                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+                                  
+                                  <h4 class="small font-weight-bold">공급예비율 <span class="float-right">19%</span>
+                                  </h4>
+                                  <div class="progress mb-4" style="background: #d7d7d7;">
+                                    <div class="progress-bar" role="progressbar" style="width: 20%;background-color: #67b0f5;"
+                                      aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+  
+                                </div>
+                              </div>
+                            </div>
+                            <a class="more" href="">최대부하전망 더보기 버튼</a>
                          
                         </div>
 
@@ -844,9 +660,9 @@
                           <div class="latest">
                             <article class="group group1">
                               <h4 class="label">
-                                <a href="javascript:void(0)">육지</a>
+                                <a href="javascript:void(0)" id="land">육지</a>
                               </h4>
-                              <div class="table_group">
+                              <div class="table_group" id="land_table">
                                 <span class="txt_right">(단위 : 원/kWh)</span>
                                 <table>
                                   <tr>
@@ -871,9 +687,9 @@
 
                             <article class="group group2">
                               <h4 class="label">
-                                <a href="javascript:void(0)">제주</a>
+                                <a href="javascript:void(0)" id="jeju">제주</a>
                               </h4>
-                              <div class="table_group">
+                              <div class="table_group" id="jeju_table">
                                 <span class="txt_right">(단위 : 원/kWh)</span>
                                 <table>
                                   <tr>
@@ -992,6 +808,26 @@
 
       $('.power_for').slick('slickGoTo',indexNum);
 
+    });
+
+    // 테이블 제어 부분
+    $("#land").on("click", function() {
+      $(".latest #land_table").css({
+          "display":"block",
+          
+      });
+      // $(".smp_table .latest #jeju_table").css({
+      //     "display":"none",
+      // });
+    });
+
+    $("#jeju").on("click", function() {
+      $(".latest #jeju_table").css({
+          "display":"block",
+      });
+      $(".latest #land_table").css({
+          "display":"none",
+      });
     });
 
   </script>
