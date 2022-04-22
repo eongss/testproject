@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="./mk/img/iljin-icon.png" rel="icon">
+  <link href="./mk/img/iljin-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Data Tables -->
+  <link href="assets/vendor/DataTables/datatables.min.css" rel="stylesheet">
+  <!-- menuCustum -->
+  <link href="./mk/css/menuCustum.css" rel="stylesheet">
+  <link href="mk/css/basic.css" rel="stylesheet">
+  <!-- graph -->
+  <link href="./mk/css/graph-style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="./P000-U01.html" class="logo d-flex align-items-center">
+        <img src="./mk/img/i-ims.png">
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn" style="margin-left: 0%;"></i>
+    </div>
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+        <div class="d-flex align-items-center justify-content-between">
+          <span class="d-none d-lg-block" id="spanTime"></span>
+        </div>
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
+          </a><!-- End Profile Iamge Icon -->
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+              <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="P000-U01.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="P000-U01.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+      </ul>
+    </nav><!-- End Icons Navigation -->
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <!-- Start login Nav -->
+      <li class="nav-item top-margin-three">
+        <a class="nav-link collapsed" href="P110-U01.html"><i class="bi bi-app"></i><span>운영현황판</span></a>
+      </li>
+      <!-- End login Nav -->
+      <!-- Strart Curremt Nav -->
+      <li class="nav-item">
+        <a class="nav-link" data-bs-target="#current-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-app"></i><span>현황</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="current-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li><a href="P111-U01.html"><i class="bi bi-circle"></i><span>장애발생현황</span></a></li>
+          <li><a href="P111-U02.html"><i class="bi bi-circle"></i><span>발전소 운영상태</span></a></li>
+          <li><a href="P111-U02-1.html"><i class="bi bi-circle"></i><span>발전소 운영상태2</span></a></li>
+          <li><a href="P111-U03.html"><i class="bi bi-circle"></i><span>전력생산</span></a></li>
+          <li><a href="P111-U04.html"><i class="bi bi-circle"></i><span>전력판매</span></a></li>
+          <li><a href="P111-U05.html"><i class="bi bi-circle"></i><span>전격거래시장현황</span></a></li>
+          <li><a href="P111-U06.html" class="active"><i class="bi bi-circle"></i><span>서버운영현황</span></a></li>
+        </ul>
+      </li>
+      <!-- End Curremt Nav -->
+      <!-- Strart antecedents Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#antecedents-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-app"></i><span>이력</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="antecedents-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li><a href="P120-U01.html"><i class="bi bi-circle"></i><span>가격변동</span></a></li>
+          <li><a href="P120-U02.html"><i class="bi bi-circle"></i><span>장애발생이력</span></a></li>
+          <li><a href="P120-U03.html"><i class="bi bi-circle"></i><span>전력생산이력</span></a></li>
+          <li><a href="P120-U04.html"><i class="bi bi-circle"></i><span>전력판매이력</span></a></li>
+          <li><a href="P120-U05.html"><i class="bi bi-circle"></i><span>접속이력</span></a></li>
+        </ul>
+      </li>
+      <!-- End antecedents Nav -->
+      <!-- Strart measure Nav -->
+       <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#measure-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-app"></i><span>계측</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="measure-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li><a href="P130-U01.html"><i class="bi bi-circle"></i><span>등록설비 조회</span></a></li>
+          <li><a href="P130-U02.html"><i class="bi bi-circle"></i><span>전력량계 계측결과</span></a></li>
+          <li><a href="P130-U03.html"><i class="bi bi-circle"></i><span>기상정보 계측결과</span></a></li>
+          <li><a href="P130-U04.html"><i class="bi bi-circle"></i><span>서버자원 계측결과</span></a></li>
+        </ul>
+      </li>
+      <!-- End measure Nav -->
+      <!-- Strart statistics Nav -->
+       <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#statistics-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-app"></i><span>통계</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="statistics-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li><a href="P140-U02.html"><i class="bi bi-circle"></i><span>발전소구성유형</span></a></li>
+          <li><a href="P140-U03.html"><i class="bi bi-circle"></i><span>전력판매효율</span></a></li>
+          <li><a href="P140-U04.html"><i class="bi bi-circle"></i><span>발전소별운영성과</span></a></li>
+          <li><a href="P140-U05.html"><i class="bi bi-circle"></i><span>발전소별전력판매</span></a></li>
+          <li><a href="P140-U06.html"><i class="bi bi-circle"></i><span>발전소별설비효율</span></a></li>
+          <li><a href="P140-U07.html"><i class="bi bi-circle"></i><span>발전설비별운영효율</span></a></li>
+          <li><a href="P140-U08.html"><i class="bi bi-circle"></i><span>발전소운영환경</span></a></li>
+        </ul>
+      </li>
+      <!-- End statistics Nav -->
+      <!-- Strart price Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#price-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-app"></i><span>전력가</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="price-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li><a href="P150-U01.html"><i class="bi bi-circle"></i><span>SMP 육지</span></a></li>
+          <li><a href="P150-U02.html"><i class="bi bi-circle"></i><span>SMP 제주</span></a></li>
+          <li><a href="P150-U03.html"><i class="bi bi-circle"></i><span>REC</span></a></li>
+        </ul>
+      </li>
+      <!-- End price Nav -->
+      <!-- Strart setting Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#setting-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-app"></i><span>관리</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="setting-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+            <li><a href="P030-U01.html"><i class="bi bi-circle"></i><span>발전소 관리</span></a></li>
+            <li><a href="P042-U01.html"><i class="bi bi-circle"></i><span>설비 관리</span></a></li>
+            <li><a href="P000-L01.html"><i class="bi bi-circle"></i><span>MENU 관리</span></a></li>
+            <li><a href="P021-U01.html"><i class="bi bi-circle"></i><span>ROLE 관리</span></a></li>
+            <li><a href="P010-U01.html"><i class="bi bi-circle"></i><span>사용자 관리</span></a></li>
+            <li><a href="P041-U01.html"><i class="bi bi-circle"></i><span>공통코드 관리</span></a></li>
+        </ul>
+      </li>
+      <!-- End setting Nav -->
+    </ul>
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+    
+    <!-- 조회 구역 시작-->
+    <div class="pagetitle">
+      <div class="row">
+        <div class="col-md-3 col-lg-3">
+          <select id="inputState" class="form-select">
+            <option selected="">Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="col-md-2 col-lg-2">
+            <button type="button" class="btn btn-seacch"><i class="bi bi-search" style="margin-right: 10px;"></i>조회</button>
+        </div>
+      </div>
+    </div>
+    <!-- 조회 구역 종료-->
+
+    <section class="section dashboard">
+      <!-- 메인구성 목록 시작-->
+      <div class="row">
+        <!-- 메인 카드 1 시작-->
+        <div class="col-md-12 col-lg-12">
+          <div class="card card-overflow">
+            <div class="card-header formBox">
+              <h4>WEB 서버</h4>
+            </div>
+            <div class="card-body card-body-overflow top-margin-two" style="min-height: 200px;">
+              <div class="row g-0">
+                <div class="col-md-2">
+                  <table class="tbl">
+                    <tbody class="table-td-width">
+                      <tr>
+                        <th>제조사</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>MODEL</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>CPU</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>MEM</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>OS DISK</th>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                  <div id="solid1"></div>
+                </div>
+                <div class="col-md-3">
+                  <div id="solid2"></div>
+                </div>
+                <div class="col-md-3">
+                  <div id="solid3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 메인 카드 1 끝-->
+        <!-- 메인 카드 2 시작-->
+        <div class="col-md-12 col-lg-12">
+          <div class="card card-overflow">
+            <div class="card-header formBox">
+              <h4>AP 서버</h4>
+            </div>
+            <div class="card-body card-body-overflow top-margin-two" style="min-height: 200px;">
+              <div class="row g-0">
+                <div class="col-md-2">
+                  <table class="tbl">
+                    <tbody class="table-td-width">
+                      <tr>
+                        <th>제조사</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>MODEL</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>CPU</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>MEM</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>OS DISK</th>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                  <div id="solid4"></div>
+                </div>
+                <div class="col-md-3">
+                  <div id="solid5"></div>
+                </div>
+                <div class="col-md-3">
+                  <div id="solid6"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 메인 카드 2 끝-->
+        <!-- 메인 카드 3 시작-->
+        <div class="col-md-12 col-lg-12">
+          <div class="card card-overflow">
+            <div class="card-header formBox">
+              <h4>AP 서버</h4>
+            </div>
+            
+            <div class="card-body card-body-overflow top-margin-two" style="min-height: 200px;">
+              <div class="row g-0">
+                <div class="col-md-2">
+                  <table class="tbl">
+                    <tbody class="table-td-width">
+                      <tr>
+                        <th>제조사</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>MODEL</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>CPU</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>MEM</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>OS DISK</th>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                  <div id="solid7"></div>
+                </div>
+                <div class="col-md-3">
+                  <div id="solid8"></div>
+                </div>
+                <div class="col-md-3">
+                  <div id="solid9"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 메인 카드 3 끝-->
+        <!-- 메인 카드 4 시작-->
+        <div class="col-md-12 col-lg-12">
+          <div class="card card-overflow">
+            <div class="card-header formBox">
+              <h4>AP 서버</h4>
+            </div>
+            
+            <div class="card-body card-body-overflow top-margin-two" style="min-height: 200px;">
+              <div class="row g-0">
+                <div class="col-md-2">
+                  <table class="tbl">
+                    <tbody class="table-td-width">
+                      <tr>
+                        <th>제조사</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>MODEL</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>CPU</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>MEM</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>OS DISK</th>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                  <div id="solid10"></div>
+                </div>
+                <div class="col-md-3">
+                  <div id="solid11"></div>
+                </div>
+                <div class="col-md-3">
+                  <div id="solid12"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 메인 카드 4 끝-->
+      </div>
+      <!-- 메인 설정 목록 종료-->
+    </section>
+  </main>
+  
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>EN-IMS</span></strong>. All Rights Reserved</div>
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- jquery JS Files -->
+  <script src="assets/js/jquery.min.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <!-- Data Tables JS Files -->
+  <script src="assets/vendor/DataTables/datatables.min.js"></script>
+
+  <script src="./mk/js/proj4.js"></script>
+  <script src="./highchartsstock/code/highstock.js"></script>
+  <script src="./highchartsstock/code/highcharts-more.js"></script>
+  <script src="./highchartsstock/code/modules/exporting.js"></script>
+  <script src="./highchartsstock/code/modules/export-data.js"></script>
+  <script src="./highcharts/code/modules/solid-gauge.js"></script>
+  <script src="./mk/js/mkgaugeChartOption.js"></script>
+
+  <script>
+
+    function getTime(){
+      var today = new Date();
+      var systime = today.toLocaleString();
+      document.getElementById('spanTime').textContent = systime;
+    }
+    function init(){
+      setInterval(getTime, 1000);
+    }
+    init();
+
+  </script>
+
+  <script>
+    
+    var chartRpm1 = Highcharts.chart('solid1', mkgaugeChartOption);
+
+    var point11 = chartRpm1.series[0].points[0];
+    var point12 = chartRpm1.series[1].points[0];
+    
+    point11.update(10);
+    point12.update(10);
+    
+    var chartRpm2 = Highcharts.chart('solid2', mkgaugeChartOption);
+
+    var point21 = chartRpm2.series[0].points[0];
+    var point22 = chartRpm2.series[1].points[0];
+    
+    point21.update(20);
+    point22.update(20);
+    
+    var chartRpm3 = Highcharts.chart('solid3', mkgaugeChartOption);
+
+    var point31 = chartRpm3.series[0].points[0];
+    var point32 = chartRpm3.series[1].points[0];
+    
+    point31.update(30);
+    point32.update(30);
+    
+    var chartRpm4 = Highcharts.chart('solid4', mkgaugeChartOption);
+
+    var point41 = chartRpm4.series[0].points[0];
+    var point42 = chartRpm4.series[1].points[0];
+    
+    point41.update(40);
+    point42.update(40);
+    
+    var chartRpm5 = Highcharts.chart('solid5', mkgaugeChartOption);
+
+    var point51 = chartRpm5.series[0].points[0];
+    var point52 = chartRpm5.series[1].points[0];
+    
+    point51.update(50);
+    point52.update(50);
+    
+    var chartRpm6 = Highcharts.chart('solid6', mkgaugeChartOption);
+
+    var point61 = chartRpm6.series[0].points[0];
+    var point62 = chartRpm6.series[1].points[0];
+    
+    point61.update(60);
+    point62.update(60);
+
+    var chartRpm7 = Highcharts.chart('solid7', mkgaugeChartOption);
+
+    var point71 = chartRpm7.series[0].points[0];
+    var point72 = chartRpm7.series[1].points[0];
+    
+    point71.update(60);
+    point72.update(60);
+    
+    var chartRpm8 = Highcharts.chart('solid8', mkgaugeChartOption);
+
+    var point81 = chartRpm8.series[0].points[0];
+    var point82 = chartRpm8.series[1].points[0];
+    
+    point81.update(60);
+    point82.update(60);
+    
+    var chartRpm9 = Highcharts.chart('solid9', mkgaugeChartOption);
+
+    var point91 = chartRpm9.series[0].points[0];
+    var point92 = chartRpm9.series[1].points[0];
+    
+    point91.update(60);
+    point92.update(60);
+    
+    var chartRpm10 = Highcharts.chart('solid10', mkgaugeChartOption);
+
+    var point101 = chartRpm10.series[0].points[0];
+    var point102 = chartRpm10.series[1].points[0];
+    
+    point101.update(60);
+    point102.update(60);
+    
+    var chartRpm11 = Highcharts.chart('solid11', mkgaugeChartOption);
+
+    var point111 = chartRpm11.series[0].points[0];
+    var point112 = chartRpm11.series[1].points[0];
+    
+    point111.update(60);
+    point112.update(60);
+    
+    var chartRpm12 = Highcharts.chart('solid12', mkgaugeChartOption);
+
+    var point121 = chartRpm12.series[0].points[0];
+    var point122 = chartRpm12.series[1].points[0];
+    
+    point121.update(60);
+    point122.update(60);
+
+  </script>
+
+</body>
+
+</html>

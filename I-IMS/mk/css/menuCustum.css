@@ -1,0 +1,355 @@
+:root {
+    /* FIXME CSS Branch Line Variable */
+    --branch-len: 20px;
+    --branch-w: 2px;
+    --branch-left: 5px;
+    --ul-p: 32px;
+    --content-h: 24px;
+}
+
+.menu-list-container,
+.menu-detail-edit-container {
+    margin: 0 1rem;
+    width: 45%;
+    min-width: 350px;
+}
+
+@media (max-width: 767.98px) {
+
+    .menu-list-container,
+    .menu-detail-edit-container {
+        margin: 0;
+        width: 100%;
+        min-width: 150px;
+    }
+}
+
+/* .menu-list-container */
+.menu-detail-edit-card {
+    height: 550px;
+}
+
+.menu-list-container header button {
+    margin-bottom: 10px;
+}
+
+.menu-list-card {
+    user-select: none;
+    width: 100%;
+    min-height: 800px;
+    overflow: auto;
+    padding: 5%;
+}
+
+.menu-list-card2 {
+    user-select: none;
+    width: 100%;
+    min-height: 800px;
+    overflow: auto;
+    padding: 5%;
+}
+
+.menu-list-card ul {
+    position: relative;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.menu-list-card ul li {
+    position: relative;
+    margin-top: 15px;
+}
+
+.menu-list-card .bi-folder {
+    margin: 0 5px 0 10px;
+}
+
+.menu-list-card .bi-plus-square {
+    color: rgb(70, 70, 167);
+    font-size: 17px;
+}
+
+.menu-list-card ul .branch-vertical-line-depth1 {
+    position: absolute;
+    background-color: lightgray;
+    display: block;
+    height: calc(100% - var(--content-h) * 0.5);
+    width: var(--branch-w);
+    left: var(--branch-left);
+    top: 0px;
+    margin-left: 0.9%;
+}
+
+.menu-list-card ul li .horizontal-line-depth1 {
+    position: absolute;
+    background-color: lightgray;
+    display: block;
+    top: calc(var(--content-h) * 0.5);
+    left: calc(var(--ul-p) * -1 + var(--branch-left));
+    width: var(--branch-len);
+    height: var(--branch-w);
+    margin-left: 1%;
+}
+
+.menu-list-card ul .branch-vertical-line {
+    position: absolute;
+    background-color: lightgray;
+    display: block;
+    height: calc(100% - var(--content-h) * 0.5);
+    width: var(--branch-w);
+    left: var(--branch-left);
+    top: 0px;
+    margin-left: 0.5%;
+}
+
+.menu-list-card ul li .horizontal-line {
+    position: absolute;
+    background-color: lightgray;
+    display: block;
+    top: calc(var(--content-h) * 0.5);
+    left: calc(var(--ul-p) * -1 + var(--branch-left));
+    width: var(--branch-len);
+    height: var(--branch-w);
+    margin-left: 0.6%;
+}
+
+.menu-list-card ul li:last-child::before {
+    position: absolute;
+    content: "";
+    display: block;
+    z-index: 1;
+    width: 20px;
+    height: calc(100% - var(--content-h) * 0.5 - var(--branch-w));
+    background-color: white;
+    left: calc(var(--ul-p) * -1 + var(--branch-left));
+    top: calc(var(--content-h) * 0.5 + var(--branch-w));
+}
+
+.menu-list-card a.menu-item {
+    color: black;
+}
+
+.menu-list-card a.menu-item .bi-caret-right-fill {
+    display: inline-block;
+    transition: all 300ms;
+    color: var(--main);
+}
+
+.menu-list-card a.menu-item:not(.collapsed) .bi-caret-right-fill {
+    transform: rotate(90deg);
+}
+
+.menu-name {
+    margin-top: 10px;
+}
+
+.menu-name-input {
+    position: relative;
+    transition: all 30ms;
+    border-style: dashed;
+    border-width: 2px;
+}
+
+.menu-name-input:focus {
+    border-color: #0000;
+    outline-offset: 2px;
+    outline: 2px solid blue;
+    z-index: 3000;
+}
+
+
+
+/* .menu-detail-edit-container */
+
+.menu-detail-edit-container h6 {
+    margin-top: 15px;
+    margin-bottom: 12px;
+}
+
+.menu-detail-edit-container .card-body .input-group-text {
+    background-color: #d0d4ff7c;
+}
+
+.menu-detail-edit-container .card-body {
+    padding: 20px;
+}
+
+.menu-detail-edit-container .card-body .input-group label {
+    display: flex;
+    align-items: flex-end;
+}
+
+.menu-detail-edit-container .card-body .input-group label p {
+    font-size: 12px;
+    padding-left: 3px;
+    margin-bottom: 2px;
+    color: #666;
+}
+
+.tree-btn {
+    margin-left: 3px;
+}
+
+.formBox {
+    background-color: #FFFBFA;
+    max-height: 55px;
+}
+
+.formBox-text {
+    text-align: right;
+}
+
+.formBox-text-label {
+    margin-top: 5%;
+}
+
+.formBox-input-text {
+    padding: 10px;
+}
+
+.formBox-button-group {
+    display: inline;
+    float: right;
+    margin-right: 20px;
+}
+
+.formBox-button {
+    display: inline;
+    float: right;
+    margin-top: 2%;
+    margin-right: 20px;
+}
+
+.formBox-button-center {
+    margin-right: 20px;
+}
+
+.card-body-weidth {
+    min-height: 1080px;
+}
+
+.card-body-weidth-overflow {
+    overflow-y: auto;
+    height: 1080px;
+}
+
+.plus-circle-font {
+    font-size: 27px;
+}
+
+.plus-circle-font2 {
+    font-size: 17px;
+}
+
+.plus-circle-dotted-font {
+    margin-left: 10PX;
+    font-size: 22px;
+    color: blue;
+}
+
+.circle-dotted-font {
+    margin-left: 10PX;
+    font-size: 22px;
+    color: red;
+}
+
+.circle-dotted-font2 {
+    margin-left: 10PX;
+    font-size: 17px;
+    color: red;
+}
+
+
+.liTileFont:hover {
+    font-weight: 600;
+}
+
+.form-dash-in {
+    border: 2px dashed #F08080;
+    padding: 3%;
+}
+
+.form-dash-se {
+    border: 2px dashed #87CEFA;
+    padding: 3%;
+    margin-top: 1%;
+}
+
+.form-h4 {
+    text-align: left;
+}
+
+.button-text {
+    color: black;
+}
+
+.fieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px groove (internal value);
+}
+
+.p-text-center {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.p-text-left {
+    text-align: left;
+    margin-top: 5%;
+}
+
+
+.td-img {
+    height: 150px;
+  }
+
+.tbl {
+    width: 100%;
+    border: 1px solid #999;
+    font-family: tahoma, gulim;
+    font-size: 9pt;
+    border-collapse: collapse;
+}
+
+.tbl tr th {
+    border: 1px solid #999;
+    padding: 10px;
+    background: #d1d2d4;
+    text-align: center;
+    font-size: 14px;
+    width: 25%;
+}
+
+.tbl tr td{
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    width: 25%;
+}
+
+.tbl .td_tal {
+    text-align: left;
+}
+
+
+.table-td-width td{
+    width: 25%;
+    font-size: 12px;
+}
+.table-td-width2 td{
+  width: 12%;
+  font-size: 12px;
+}
+.table-td-width3 td{
+  width: 14%;
+  font-size: 12px;
+}

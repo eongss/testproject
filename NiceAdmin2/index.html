@@ -48,6 +48,7 @@
 
   <!-- 슬릭 슬라이더 css -->
   <style>
+
     /* 슬릭 버튼 관련 */
     .power_for { position:relative; margin-top: 42px; }
     .power_for button { position:absolute; z-index:10; top:50%; 
@@ -92,6 +93,12 @@
     .fp-tableCell { background:#113561 url(kpx/img/bg_section02.png) left bottom no-repeat; 
       height:600px; padding:51px 140px 0;
     }
+
+    .graph_style {
+      margin-top: 28px;
+    }
+
+
     .graph_style .level .img {
       display: block;
       position: relative;
@@ -116,11 +123,16 @@
       /* width: 100%; */
       text-align: center;
     }
-
-    .table_group {
-      padding-top: 35px;
+    
+    .table_group#land_table {
+      padding-top: 46px;
+      display: block;
     }
 
+    .table_group#jeju_table {
+      padding-top: 46px;
+    }
+    
     .table_group table{
       width: 100%;
       border-bottom: 1px solid #e1e1e1;
@@ -138,23 +150,34 @@
       text-align: center;
     }
 
-    .table_group .txt_left {
+    .table_group .rec_txt {
+      font-size: 11px;
+      /* position: absolute; */
+      /* display: block; */
+    }
+    
+    .table_group #txt_left {
+      
+      /* top: 0;
+      left: 0; */
       float: left;
     }
 
-    .table_group .txt_right {
+    .table_group #txt_right {
       float: right;
     }
 
+
     .power_item.item04 p {
-      /* width: 100%; */
-      /* height: 32px; */
+      width: 100%;
+      height: 30px;
       text-align: center;
       color: #fff;
       background-color: #387fd6;
+      padding-top: 6px;
     }
 
-    .latest { position: relative;}
+    .latest { position: relative; margin-top: 19px;}
 
     .latest .label {
       position: absolute;
@@ -163,8 +186,6 @@
       width: 50%;
     }
 
-
-
     .latest .label a {
       display: block;
       width: 100%;
@@ -172,6 +193,8 @@
       color: #555;
       border: 1px solid #d7d7d7;
       transition: 0.2s;
+      font-size: 15px;
+      padding: 6px 0 3px 7px;
     }
 
     .latest .group2 .label {
@@ -184,10 +207,50 @@
 
     .more {
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 17px;
+      right: 13px;
+      width: 20px;
+      height: 24px;
+      overflow: hidden;
+      transition: 0.2s;
     }
 
+    .more:hover {
+      transform-origin: 50% 50%;
+      transform: rotate(180deg);
+    }
+
+    .more::before {
+      font-family: 'xeicon';
+      color: #333;
+      font-size: 20px;
+      content: "\e913";
+      font-weight: 900;
+
+    }
+
+    .power_for h3 {
+      color: #333;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .rec_table {
+      margin-top: 19px;
+    }
+
+    .label .active {
+      border: 2px solid #7c7c7c !important;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .graph_info {
+      font-size: 12px;
+      padding: 0 20px 10px 20px; 
+    }
+
+    
     
     </style>
 </head>
@@ -571,7 +634,7 @@
                           <h3>최대부하전망</h3>
 
                           <div class="graph_style" style="display: flex;">
-                            <div class="level level01" style="flex-grow: 1;">
+                            <div class="level level01" style="flex-grow: 0;">
                               <span class="img"></span>
                               <strong class="txt">정상</strong>
                             </div>
@@ -584,21 +647,21 @@
 
                                 <h4 class="small font-weight-bold">최대부하 <span class="float-right">71,000 MW</span>
                                 </h4>
-                                <div class="progress mb-4" style="background: #d7d7d7;">
+                                <div class="progress mb-3" style="background: #d7d7d7;">
                                   <div class="progress-bar" role="progressbar" style="width: 20%;background-color: #23b579;"
                                     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 
                                 <h4 class="small font-weight-bold">공급예비력<span class="float-right">13,246 MW</span>
                                 </h4>
-                                <div class="progress mb-4" style="background: #d7d7d7;">
+                                <div class="progress mb-3" style="background: #d7d7d7;">
                                   <div class="progress-bar" role="progressbar" style="width: 20%;background-color: #b55dec;"
                                   aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 
                                 <h4 class="small font-weight-bold">공급예비율 <span class="float-right">19%</span>
                                 </h4>
-                                <div class="progress mb-4" style="background: #d7d7d7;">
+                                <div class="progress mb-3" style="background: #d7d7d7;">
                                   <div class="progress-bar" role="progressbar" style="width: 20%;background-color: #67b0f5;"
                                     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
@@ -606,14 +669,14 @@
                               </div>
                             </div>
                           </div>
-                          <a class="more" href="">최대부하전망 더보기 버튼</a>
+                          <a class="more" href="javascript:void(0)">더보기</a>
                         </div>
 
                         <div class="power_item item02" style="background-color:#fff">
                             <h3>실시간전력수급현황</h3>
   
                             <div class="graph_style" style="display:flex;">
-                              <div class="level level01" style="flex-grow: 1";>
+                              <div class="level level01" style="flex-grow: 0";>
                                 <span class="img"></span>
                                 <strong class="txt">정상</strong>
                               </div>
@@ -622,28 +685,28 @@
   
                                   <h4 class="small font-weight-bold">공급능력 <span class="float-right">71,000 MW</span>
                                   </h4>
-                                  <div class="progress mb-4" style="background: #d7d7d7;">
+                                  <div class="progress mb-3" style="background: #d7d7d7;">
                                     <div class="progress-bar" role="progressbar" style="width: 80%;background-color: #f2a14a;"
                                       aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                                   </div>
   
                                   <h4 class="small font-weight-bold">현재부하 <span class="float-right">71,000 MW</span>
                                   </h4>
-                                  <div class="progress mb-4" style="background: #d7d7d7;">
+                                  <div class="progress mb-3" style="background: #d7d7d7;">
                                     <div class="progress-bar" role="progressbar" style="width: 20%;background-color: #23b579;"
                                       aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                                   </div>
                                   
                                   <h4 class="small font-weight-bold">공급예비력<span class="float-right">13,246 MW</span>
                                   </h4>
-                                  <div class="progress mb-4" style="background: #d7d7d7;">
+                                  <div class="progress mb-3" style="background: #d7d7d7;">
                                     <div class="progress-bar" role="progressbar" style="width: 20%;background-color: #b55dec;"
                                     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                                   </div>
                                   
                                   <h4 class="small font-weight-bold">공급예비율 <span class="float-right">19%</span>
                                   </h4>
-                                  <div class="progress mb-4" style="background: #d7d7d7;">
+                                  <div class="progress mb-3" style="background: #d7d7d7;">
                                     <div class="progress-bar" role="progressbar" style="width: 20%;background-color: #67b0f5;"
                                       aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                                   </div>
@@ -651,7 +714,7 @@
                                 </div>
                               </div>
                             </div>
-                            <a class="more" href="">최대부하전망 더보기 버튼</a>
+                            <a class="more" href="javascript:void(0)">더보기</a>
                          
                         </div>
 
@@ -663,7 +726,7 @@
                                 <a href="javascript:void(0)" id="land">육지</a>
                               </h4>
                               <div class="table_group" id="land_table">
-                                <span class="txt_right">(단위 : 원/kWh)</span>
+                                <span id="txt_right" class="rec_txt">(단위 : 원/kWh)</span>
                                 <table>
                                   <tr>
                                       <th>거래일</th>
@@ -690,7 +753,7 @@
                                 <a href="javascript:void(0)" id="jeju">제주</a>
                               </h4>
                               <div class="table_group" id="jeju_table">
-                                <span class="txt_right">(단위 : 원/kWh)</span>
+                                <span id="txt_right" class="rec_txt">(단위 : 원/kWh)</span>
                                 <table>
                                   <tr>
                                       <th>거래일</th>
@@ -713,6 +776,8 @@
                             </article>
 
                           </div>
+                          <a class="more" href="javascript:void(0)">더보기</a>
+
                         </div>
 
                         <div class="power_item item04" style="background-color:#fff">
@@ -720,8 +785,8 @@
                           <div class="rec_table">
                             <p>1REC = 1MWh(가중치에 따라 변동)</p>
                             <div class="table_group">
-                              <span class="txt_left">※ 매주 화, 목요일 10 : 00 ~ 16 : 00 개장</span>
-                              <span class="txt_right">(단위:REC, 원/REC)</span>
+                              <span class="rec_txt" id="txt_left">※ 매주 화, 목요일 10 : 00 ~ 16 : 00 개장</span>
+                              <span class="rec_txt" id="txt_right">(단위:REC, 원/REC)</span>
                               <table>
                                 <tr>
                                     <th>거래일</th>
@@ -796,32 +861,36 @@
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
-      initialSlide: 0,
+      // initialSlide: 0,
     });
 
-    $('.power_for').slick('slickGoTo', 1);
+    $('.power_for').slick('slickGoTo', 3);
 
     $('.dots').click(function() {
 
       var indexNum = $(this).index();
       console.log(indexNum);
 
-      $('.power_for').slick('slickGoTo',indexNum);
+      $('.power_for').slick('slickGoTo',indexNum-1);
 
     });
 
     // 테이블 제어 부분
     $("#land").on("click", function() {
+      // console.log(this);
+      $(this).addClass("active");
+      $("#jeju").removeClass("active");
+
       $(".latest #land_table").css({
           "display":"block",
-          
       });
-      // $(".smp_table .latest #jeju_table").css({
-      //     "display":"none",
-      // });
     });
 
     $("#jeju").on("click", function() {
+      // console.log(this);
+      $(this).addClass("active");
+      $("#land").removeClass("active");
+
       $(".latest #jeju_table").css({
           "display":"block",
       });
