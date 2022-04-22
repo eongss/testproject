@@ -980,6 +980,7 @@
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
+      initialSlide: 0,
     });
 
     $('.power_for').slick('slickGoTo', 1);
@@ -989,7 +990,7 @@
       var indexNum = $(this).index();
       console.log(indexNum);
 
-      $('.power_for').slick('slickGoTo',indexNum-1);
+      $('.power_for').slick('slickGoTo',indexNum);
 
     });
 
