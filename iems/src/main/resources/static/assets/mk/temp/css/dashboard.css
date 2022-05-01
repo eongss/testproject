@@ -1,0 +1,43 @@
+#Mapcontainer {
+	min-width: 310px;
+	max-width: 900px;
+	min-height: 800px;
+	margin: 0 auto;
+}
+
+.highcharts-no-tooltip {
+	display: none;
+}
+
+#dynamicUpdate {
+	min-height: 490px;
+}
+
+#errorDataTable {
+	min-height: 170px;
+}
+#errorDataTable .card-table-hw {
+	font-weight: 900;
+}
+
+.solid {
+	font-weight: 900;
+	/* width: 350px; */
+	/* height: 210px; */
+	/* margin: auto; */
+}
+
+/* #solid1 {
+	width: 350px;
+	height: 210px;
+}
+
+#solid2 {
+	width: 350px;
+	height: 210px;
+}
+
+#solid3 {
+	width: 350px;
+	height: 210px;
+} */

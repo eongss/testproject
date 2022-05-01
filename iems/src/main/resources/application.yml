@@ -1,0 +1,124 @@
+server:
+  port: 8000
+  
+spring:
+  profiles: 
+    active: local
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mariadb://ensnc.iptime.org:43306/EMS
+    username: ems
+    password: ems4321!
+  http:
+    encoding:
+      charset: UTF-8
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  servlet:
+    multipart:
+      max-file-size: -1 # default 3MB
+      max-request-size: -1 # default 50MB
+
+logging:
+  file:
+    path: D:/DTCSProject/Directory/logs
+    name: ${logging.file.path}/log.log
+    max-size: 10MB      
+  level:
+    com:
+      dtcs: debug
+    org:
+      springframework: info
+    root: info
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} %red(${spring.profiles}) %magenta([%thread]) %highlight(%-5level)
+      %logger.%M - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36}.%M - %msg%n'
+    rolling-file-name: ${logging.file.path}/archived/log.%d{yyyy-MM-dd}.%i.log
+    
+mybatis:
+  mapper-locations: mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+iems:
+  props:
+    upload-path: D:/IEMSProject/Directory/upload/
+    attach-path: D:/IEMSProject/Directory/upload/attach/
+    filein-path: D:/IEMSProject/Directory/upload/filein/
+    temp-path: D:/IEMSProject/Directory/upload/temp/
+
+    
+--- 
+
+#Local Profile
+spring:
+  profiles: local
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mariadb://ensnc.iptime.org:43306/EMS
+    username: ems
+    password: ems4321!
+    
+iems:
+  props:
+    upload-path: D:/IEMSProject/Directory/upload/
+    attach-path: D:/IEMSProject/Directory/upload/attach/
+    filein-path: D:/IEMSProject/Directory/upload/filein/
+    temp-path: D:/IEMSProject/Directory/upload/temp/
+    
+---
+
+#Dev Profile
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    password: csdev1234!@
+    url: jdbc:mariadb://203.245.13.92:16033/DTCSDB
+    username: csdev
+
+iems:
+  props:
+    upload-path: D:/IEMSProject/Directory/upload/
+    attach-path: D:/IEMSProject/Directory/upload/attach/
+    filein-path: D:/IEMSProject/Directory/upload/filein/
+    temp-path: D:/IEMSProject/Directory/upload/temp/
+---
+
+#Prod Profile  
+
+spring:
+  profiles: prod
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:log4jdbc:mariadb://ensnc.iptime.org:43306/EMS
+    username: ems
+    password: ems4321!
+
+iems:
+  props:
+    upload-path: D:/IEMSProject/Directory/upload/
+    attach-path: D:/IEMSProject/Directory/upload/attach/
+    filein-path: D:/IEMSProject/Directory/upload/filein/
+    temp-path: D:/IEMSProject/Directory/upload/temp/
+    
+logging:
+  file:
+    path: /iemsscv/iems/logs
+    name: ${logging.file.path}/log.log
+    max-size: 10MB      
+  level:
+    com:
+      dtcs: debug
+    org:
+      springframework: info
+    root: info
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} %red(${spring.profiles}) %magenta([%thread]) %highlight(%-5level)
+      %logger.%M - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36}.%M - %msg%n'
+    rolling-file-name: ${logging.file.path}/archived/log.%d{yyyy-MM-dd}.%i.log    
+            

@@ -1,0 +1,27 @@
+#example1_wrapper {
+	height: 120px;
+}
+
+#example1 {
+	min-height: 90px;
+}
+
+#example2_wrapper {
+	min-height: 270px;
+}
+
+#example2 {
+	min-height: 250px;
+}
+
+#example3_wrapper {
+	min-height: 270px;
+}
+
+#example3 {
+	min-height: 250px;
+}
+
+#solid1 {
+	height: 230px;
+}

@@ -1,0 +1,15 @@
+#example1_wrapper {
+	height: 120px;
+}
+
+#example1 {
+	min-height: 90px;
+}
+
+#example_wrapper {
+	min-height: 550px;
+}
+
+#example {
+	min-height: 550px;
+}
