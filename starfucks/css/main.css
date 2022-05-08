@@ -12,17 +12,19 @@ img {
 a {
   text-decoration: none;
 }
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
 
 /* HEADER */
 header {
   background-color: #F6F5F0;
   border-bottom: 1px solid #c8c8c8;
 }
-header .inner {
-  width: 1100px;
+header > .inner {
   height: 120px;
-  margin: 0 auto;
-  position: relative;
 }
 header .logo {
   height: 75px;
